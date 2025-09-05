@@ -5,6 +5,8 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter @Setter
 public class CapacityDTO {
     private Long id;
@@ -16,4 +18,6 @@ public class CapacityDTO {
     @NotBlank(message = "La descripción es obligatoria")
     @Size(max = 90, message = "La descripción no debe superar los 90 caracteres")
     private String description;
+
+    private List<Long> technologyIds;
 }

@@ -21,8 +21,11 @@ public enum TechnicalMessage {
     CAPACITY_DESCRIPTION_REQUIRED("400", "Capacity description is required", "description"),
     CAPACITY_NAME_TOO_LONG("400", "Capacity name max length is 50", "name"),
     CAPACITY_DESCRIPTION_TOO_LONG("400", "Capacity description max length is 90", "description"),
-    ADAPTER_RESPONSE_NOT_FOUND("404", "Capacity not found", "id");
-
+    ADAPTER_RESPONSE_NOT_FOUND("404", "Capacity not found", "id"),
+    CAPACITY_MIN_TECHS("400", "A capacity must have at least 3 technologies", "technologyIds"),
+    CAPACITY_MAX_TECHS("400", "A capacity must have at most 20 technologies", "technologyIds"),
+    CAPACITY_DUP_TECHS("400", "Technologies must be unique in a capacity", "technologyIds"),
+    TECHNOLOGY_NOT_FOUND("404", "Some technology IDs do not exist", "technologyIds");
 
     public final String code;
     public final String message;

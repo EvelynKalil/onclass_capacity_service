@@ -12,11 +12,13 @@ public interface CapacityMapper {
     @Mapping(target = "id", ignore = true)
     @Mapping(source = "name",        target = "name")
     @Mapping(source = "description", target = "description")
+    @Mapping(source = "technologyIds", target = "technologyIds")
     Capacity dtoToDomain(CapacityDTO dto);
 
     // Dominio → DTO
     @Mapping(source = "id",          target = "id")
     @Mapping(source = "name",        target = "name")
     @Mapping(source = "description", target = "description")
+    @Mapping(source = "technologyIds", target = "technologyIds")
     CapacityDTO toDto(Capacity model);
 }
